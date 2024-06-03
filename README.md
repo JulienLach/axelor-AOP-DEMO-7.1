@@ -23,6 +23,15 @@ This should generate the war package for under build/libs directory. You can tes
 
 You can also test the application using the embedded tomcat server. First edit the `axelor-config.properties` and configure the database to use and then run the following command from the interactive shell.
 
+```
+# PostgreSQL
+db.default.driver = org.postgresql.Driver
+db.default.ddl = update
+db.default.url = jdbc:postgresql://localhost:5432/open-platform-demo-dev-7-1-0
+db.default.user = myuser
+db.default.password = mypassword
+```
+
 ```bash
 $ ./gradlew --no-daemon run
 ```
